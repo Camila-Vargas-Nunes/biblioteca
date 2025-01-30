@@ -5,7 +5,7 @@ import { Movie } from '../utils/api';
 type MoviesCarouselProps = {
   bestMovies: Movie[];
 };
-// Fiquei com um pouco de dificuldade de implementar o Carousel
+// Fiquei com um pouco de dificuldade de implementar o Carousel, consultei algumas partes para implementar da melhor forma
 export function MoviesCarousel({ bestMovies }: MoviesCarouselProps) {
   return (
     <Flex>
@@ -39,3 +39,5 @@ export function MoviesCarousel({ bestMovies }: MoviesCarouselProps) {
     </Flex>
   )
 }
+
+// A imagem do carousel estava ajustada, porem fui ajustar outras propriedades o que acabou me atrapalhando com o tempo. Por isso não consegui entregar perfeito como gostaria.
