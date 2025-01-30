@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Explorador de Filmes
 
-## Getting Started
+A aplicação foi desenvolvida com Next.js e TypeScript que apresenta filmes utilizando uma API externa. O projeto conta com uma interface construída com Ant Design e recursos avançados de carregamento e paginação.
 
-First, run the development server:
+## 📋 Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Este projeto foi desenvolvido para o desafio técnico na empresa Slideworks, que consiste em replicar a página do Figma, demonstrando a implementação de uma aplicação web moderna para exploração de filmes. Utilizando o desenvolvimento com Next.js, TypeScript e Ant Design.
+
+## ✨ Funcionalidades
+
+* Carrossel dinâmico com os melhores filmes
+* Sistema de paginação para navegação eficiente
+* Skeleton loading para melhor experiência do usuário
+* Layout responsivo com Ant Design
+* Integração com redes sociais (Facebook, Twitter, Instagram)
+* Sistema de avaliação com estrelas
+* Fonte personalizada (Montserrat) para melhor tipografia
+* Ordenação de filmes por avaliação
+
+## 🛠️ Tecnologias Utilizadas
+
+* [Next.js 15](https://nextjs.org/) - Framework React com SSR
+* [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript
+* [Ant Design](https://ant.design/) - Biblioteca de componentes UI
+* [React 19](https://reactjs.org/) - Biblioteca JavaScript
+* [Axios](https://axios-http.com/) - Cliente HTTP
+
+### Principais Dependências
+
+```json
+{
+  "dependencies": {
+    "@ant-design/icons": "^5.6.0",
+    "@ant-design/nextjs-registry": "^1.0.2",
+    "antd": "^5.23.3",
+    "axios": "^1.7.9",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Componentes Principais
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* `Header` - Cabeçalho da aplicação
+* `Footer` - Rodapé com links sociais
+* `MoviesCarousel` - Carrossel de filmes em destaque
+* `Movies` - Grade de exibição de filmes
+* `Layout` - Estrutura principal com fonte Montserrat
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Como Começar
 
-## Learn More
+Para executar o projeto localmente, siga estes passos:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git clone
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+cd movies-app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+npm install
 
-## Deploy on Vercel
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A aplicação estará disponível em `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Configuração
+
+1. Certifique-se de ter Node.js instalado 
+2. Configure as variáveis de ambiente necessárias
+3. Verifique se a API externa está acessível
+
+## 🔄 API e Tipos
+
+```typescript
+// Interface principal do Movie
+export type Movie = {
+  /** Equipe do filme (diretor, atores) */
+  crew: string;
+  
+  /** URL do poster do filme */
+  image_url: string;
+  
+  /** Avaliação do filme */
+  rating: string;
+  
+  /** Título do filme */
+  title: string;
+  
+  /** Ano de lançamento */
+  year: string;
+};
+
+// Interface da resposta da API
+type MoviesApiResponse = {
+  /** Array contendo lista de filmes */
+  movies: Movie[];
+  
+  /** Número total de páginas disponíveis */
+  totalPages: number;
+};
+```
+
+## 👤 Autor(a)
+
+Criado com ❤️ por Camila Vargas Nunes
+
