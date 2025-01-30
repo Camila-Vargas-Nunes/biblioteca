@@ -17,9 +17,9 @@ export function Footer() {
             <Link style={{ color: "#FFFFFF" }} href="#">Privacy Policy</Link>
           </div>
           <div className="footer-social">
-            <Link style={{ color: "#FFFFFF" }} href="#"><FacebookOutlined /></Link>
-            <Link style={{ color: "#FFFFFF" }} href="#"><TwitterOutlined /></Link>
-            <Link style={{ color: "#FFFFFF" }} href="#"><InstagramOutlined /></Link>
+            <Link style={{ color: "#FFFFFF" }} href="https://www.facebook.com/"><FacebookOutlined /></Link>
+            <Link style={{ color: "#FFFFFF" }} href="https://x.com/"><TwitterOutlined /></Link>
+            <Link style={{ color: "#FFFFFF" }} href="https://www.instagram.com/"><InstagramOutlined /></Link>
           </div>
         </div>
       </div>

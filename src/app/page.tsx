@@ -44,6 +44,7 @@ export default function Home() {
             if (type === 'page') {
               return (
                 <button
+                  // precisei estilizar direto no codigo para que a estilização se aproximasse mais do Figma. 
                   style={{
                     backgroundColor: page === currentPage ? '#726BEA' : 'white',
                     color: page === currentPage ? 'white' : '#726BEA',

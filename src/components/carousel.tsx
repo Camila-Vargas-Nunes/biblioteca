@@ -5,7 +5,7 @@ import { Movie } from '../utils/api';
 type MoviesCarouselProps = {
   bestMovies: Movie[];
 };
-
+// Fiquei com um pouco de dificuldade de implementar o Carousel
 export function MoviesCarousel({ bestMovies }: MoviesCarouselProps) {
   return (
     <Flex>
