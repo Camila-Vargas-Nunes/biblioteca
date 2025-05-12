@@ -4,7 +4,7 @@ A aplicação foi desenvolvida com Next.js e TypeScript que apresenta filmes uti
 
 ## 📋 Sobre o Projeto
 
-Este projeto foi desenvolvido para o desafio técnico na empresa Slideworks, que consiste em replicar a página do Figma, demonstrando a implementação de uma aplicação web moderna para exploração de filmes. Utilizando o desenvolvimento com Next.js, TypeScript e Ant Design.
+Este projeto consiste em replicar a página do Figma, demonstrando a implementação de uma aplicação web moderna para exploração de filmes. Utilizando o desenvolvimento com Next.js, TypeScript e Ant Design.
 
 ## ✨ Funcionalidades
 
