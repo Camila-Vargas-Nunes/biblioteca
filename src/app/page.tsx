@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchMovies() {
       const { movies, totalPages } = await getMovies(currentPage);
-      const sortedMovies = movies.sort((a: any, b: any) => b.rating - a.rating);
+      const sortedMovies = [...movies].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
       const topMovies = sortedMovies.slice(0, 3);
       setMovies(movies);
       setTotalPages(totalPages);
@@ -28,6 +28,26 @@ export default function Home() {
     fetchMovies();
   }, [currentPage]);
 
+  // Função de renderização customizada para os itens da paginação
+  const itemRender = (current: number, type: string, originalElement: React.ReactNode) => {
+    if (type === 'page') {
+      return (
+        <button
+          style={{
+            backgroundColor: current === currentPage ? '#726BEA' : 'white',
+            color: current === currentPage ? 'white' : '#726BEA',
+            border: '1.2px solid #DADBE0',
+            borderRadius: 4,
+            padding: '5px 10px',
+          }}
+        >
+          {current}
+        </button>
+      );
+    }
+    return originalElement;
+  };
+
   return (
     <>
       <Header />
@@ -37,28 +57,11 @@ export default function Home() {
 
         <Pagination
           defaultCurrent={1}
+          current={currentPage}
           total={totalPages}
-          onChange={(page: any) => setCurrentPage(page)}
+          onChange={setCurrentPage}
           showSizeChanger={false}
-          itemRender={(page: any, type: any, originalElement: any) => {
-            if (type === 'page') {
-              return (
-                <button
-                  // precisei estilizar direto no codigo para que a estilização se aproximasse mais do Figma. 
-                  style={{
-                    backgroundColor: page === currentPage ? '#726BEA' : 'white',
-                    color: page === currentPage ? 'white' : '#726BEA',
-                    border: '1.2px solid #DADBE0',
-                    borderRadius: 4,
-                    padding: '5px 10px',
-                  }}
-                >
-                  {page}
-                </button>
-              );
-            }
-            return originalElement;
-          }}
+          itemRender={itemRender}
         />
       </Skeleton>
       <Footer />

@@ -1,0 +1,37 @@
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footerLogo {
+    margin-bottom: 1rem;
+}
+
+.footerDivider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLinks a {
+    margin-right: 1rem;
+    color: #FFFFFF !important;
+}
+
+.footerSocial a {
+    margin-left: 1rem;
+    color: #FFFFFF !important;
+}

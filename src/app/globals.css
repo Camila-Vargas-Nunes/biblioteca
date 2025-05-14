@@ -1,4 +1,4 @@
-.header {
+/* .header {
   width: 100%;
   height: 104px;
   background-color: #fff;
@@ -331,4 +331,309 @@
 
 .ant-carousel {
   width: 100%;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: 104px;
+  background-color: #fff;
+}
+
+.header-content {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 112px;
+}
+
+.header-logo {
+  width: 176px;
+  height: 33px;
+}
+
+/* RATING */
+.rating {
+  background-color: rgba(114, 107, 234, 0.8);
+  width: 93px;
+  height: 37px;
+  padding: 8px 16px 8px 16px;
+  gap: 4px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  background-color: rgba(114, 107, 234, 1);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-logo {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.company-logo {
+  height: 33px;
+  width: 176px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1rem 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #FFFFFF;
+  margin-right: 1.5rem;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-social a {
+  color: #FFFFFF;
+  margin-left: 1rem;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: rgba(230, 230, 241, 0.8);
+}
+
+/* MOVIE CAROUSEL - CORREÇÕES PRINCIPAIS */
+.movie-carousel {
+  width: 100%;
+  height: 577px;
+  position: relative;
+  background: #000;
+}
+
+.movie-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-title-overlay {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  color: white;
+  max-width: 50%;
+}
+
+.banner-best-title {
+  margin-bottom: 20px;
+}
+
+.best-month {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.banner-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+
+.rating-banner-crew {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rating-banner {
+  background-color: rgba(114, 107, 234, 0.8);
+  width: 94px;
+  height: 37px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.rating-banner-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  color: white;
+}
+
+.movie-crew-banner {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* CAROUSEL DOTS */
+.custom-dots {
+  bottom: 30px !important;
+}
+
+.custom-dots li button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: white !important;
+  opacity: 0.5;
+}
+
+.custom-dots li.slick-active button {
+  opacity: 1 !important;
+}
+
+/* MOVIE CARDS */
+.card {
+  width: 280px;
+  height: 602px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #FCFCFC;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.title {
+  font-family: 'Montserrat';
+  color: #232323;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0 0 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 30px 0;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.movie-year {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 14px;
+  color: #232323;
+}
+
+.movie-crew {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  color: #232323;
+}
+
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* ANT DESIGN OVERRIDES */
+.ant-carousel {
+  width: 100% !important;
+}
+
+.ant-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.ant-card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .movie-title-overlay {
+    left: 20px;
+    bottom: 60px;
+    max-width: 80%;
+  }
+
+  .banner-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .footer-content {
+    padding: 0 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -1,0 +1,146 @@
+.movieCarousel {
+    width: 100%;
+    height: 577px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.carousel {
+    height: 100%;
+}
+
+.slide {
+    height: 577px;
+    position: relative;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.movieImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bannerContent {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 112px;
+}
+
+.bestMonth {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.movieTitle {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+
+.movieInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ratingContainer {
+    background-color: rgba(114, 107, 234, 0.8);
+    border-radius: 50px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.ratingStar {
+    color: white;
+}
+
+.ratingValue {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.movieCrew {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.customDots {
+    bottom: 30px !important;
+}
+
+.customDots li button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: white !important;
+    opacity: 0.5;
+}
+
+.customDots li.slick-active button {
+    opacity: 1;
+    background: white !important;
+}
+
+.fallbackImage {
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.5rem;
+    border: 1px dashed #ccc;
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        padding: 50px 20px;
+    }
+
+    .bannerContent {
+        padding: 0 20px;
+    }
+
+    .movieTitle {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .movieInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
